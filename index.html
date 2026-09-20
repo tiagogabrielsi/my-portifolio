@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seu Nome — Desenvolvedor(a) de Software</title>
+  <meta name="description" content="Portfólio de Seu Nome, desenvolvedor(a) de software. Projetos, habilidades e contato." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-theme="dark">
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container">
+      <a href="#top" class="logo">
+        <span class="logo-bracket">&lt;</span>SeuNome<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projetos" class="nav-link">Projetos</a></li>
+        <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#contato" class="btn btn-sm btn-primary nav-cta">Vamos conversar</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero-text reveal">
+        <p class="hero-eyebrow">Olá, eu sou</p>
+        <h1 class="hero-title">Seu Nome</h1>
+        <p class="hero-role">
+          <span class="typed-prefix">Eu sou </span><span id="typed" class="typed"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-desc">
+          Construo produtos digitais rápidos, acessíveis e bem testados — do
+          protótipo ao deploy. Apaixonado(a) por resolver problemas reais com
+          código limpo e boas decisões de arquitetura.
+        </p>
+        <div class="hero-actions">
+          <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+          <a href="assets/cv.pdf" class="btn btn-outline" download>Baixar CV</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/seunome" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16 0 1.56-.02 2.82-.02 3.2 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/seunome" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a href="mailto:voce@email.com" aria-label="E-mail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="avatar-frame">
+          <div class="avatar-placeholder">SN</div>
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+        </div>
+        <div class="code-card">
+          <div class="code-card-head">
+            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+            <span class="code-card-title">sobre-mim.js</span>
+          </div>
+          <pre class="code-card-body"><code><span class="tok-kw">const</span> <span class="tok-var">dev</span> = {
+  nome: <span class="tok-str">"Seu Nome"</span>,
+  stack: [<span class="tok-str">"JS"</span>, <span class="tok-str">"React"</span>, <span class="tok-str">"Node"</span>],
+  foco: <span class="tok-str">"produto + qualidade"</span>,
+  disponivel: <span class="tok-bool">true</span>,
+};</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <p class="scroll-indicator reveal"><span></span>role para explorar</p>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section container">
+      <h2 class="section-title reveal"><span class="section-num">01.</span> Sobre mim</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Sou desenvolvedor(a) de software com experiência em construir
+            aplicações web do zero — da interface ao banco de dados. Gosto de
+            transformar problemas complexos em soluções simples, performáticas
+            e fáceis de manter.
+          </p>
+          <p>
+            Nos últimos anos venho trabalhando com <strong>JavaScript/TypeScript</strong>,
+            <strong> React</strong> e <strong>Node.js</strong>, sempre com atenção a boas
+            práticas, testes automatizados e experiência do usuário. Curioso(a)
+            por natureza, estou sempre aprendendo algo novo — seja uma
+            linguagem, um framework ou uma prática de engenharia.
+          </p>
+          <p>Fora do código, gosto de [seus hobbies], [interesses] e [algo pessoal que te represente].</p>
+
+          <ul class="about-facts">
+            <li><strong>Localização</strong><span>Sua Cidade, País</span></li>
+            <li><strong>Foco atual</strong><span>Front-end &amp; Full Stack</span></li>
+            <li><strong>Disponibilidade</strong><span>Aberto(a) a novas oportunidades</span></li>
+          </ul>
+        </div>
+
+        <div class="about-highlights reveal">
+          <div class="highlight-card">
+            <span class="highlight-number" data-count="4">0</span>
+            <span class="highlight-label">anos de experiência</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number" data-count="20">0</span>
+            <span class="highlight-label">projetos entregues</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number" data-count="10">0</span>
+            <span class="highlight-label">tecnologias dominadas</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number" data-count="100">0</span>
+            <span class="highlight-label">% comprometido(a)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <h2 class="section-title reveal"><span class="section-num">02.</span> Skills &amp; Tecnologias</h2>
+
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3>Front-end</h3>
+          <ul class="skill-tags">
+            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>TypeScript</li>
+            <li>React</li><li>Next.js</li><li>Tailwind CSS</li>
+          </ul>
+        </div>
+        <div class="skill-category reveal">
+          <h3>Back-end</h3>
+          <ul class="skill-tags">
+            <li>Node.js</li><li>Express</li><li>Python</li><li>REST APIs</li>
+            <li>PostgreSQL</li><li>MongoDB</li>
+          </ul>
+        </div>
+        <div class="skill-category reveal">
+          <h3>Ferramentas &amp; DevOps</h3>
+          <ul class="skill-tags">
+            <li>Git</li><li>GitHub</li><li>Docker</li><li>CI/CD</li>
+            <li>Vercel</li><li>Linux</li>
+          </ul>
+        </div>
+        <div class="skill-category reveal">
+          <h3>Boas práticas</h3>
+          <ul class="skill-tags">
+            <li>Testes automatizados</li><li>Clean Code</li><li>Code Review</li>
+            <li>Metodologias ágeis</li><li>Acessibilidade</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section container">
+      <h2 class="section-title reveal"><span class="section-num">03.</span> Projetos em destaque</h2>
+
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-thumb" style="--grad-a:#7c5cff; --grad-b:#00d4c4;">
+            <span class="project-thumb-icon">◆</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Nome do Projeto 1</h3>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener" aria-label="Repositório no GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16 0 1.56-.02 2.82-.02 3.2 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener" aria-label="Ver demo ao vivo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+                </a>
+              </div>
+            </div>
+            <p>
+              Breve descrição do projeto: qual problema ele resolve, para quem
+              é e o que faz dele interessante. Duas ou três frases já bastam.
+            </p>
+            <ul class="project-tags">
+              <li>React</li><li>Node.js</li><li>PostgreSQL</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-thumb" style="--grad-a:#00d4c4; --grad-b:#ffb454;">
+            <span class="project-thumb-icon">▲</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Nome do Projeto 2</h3>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener" aria-label="Repositório no GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16 0 1.56-.02 2.82-.02 3.2 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener" aria-label="Ver demo ao vivo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+                </a>
+              </div>
+            </div>
+            <p>
+              Breve descrição do projeto: qual problema ele resolve, para quem
+              é e o que faz dele interessante. Duas ou três frases já bastam.
+            </p>
+            <ul class="project-tags">
+              <li>TypeScript</li><li>Next.js</li><li>Tailwind</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-thumb" style="--grad-a:#ffb454; --grad-b:#ff6b6b;">
+            <span class="project-thumb-icon">●</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Nome do Projeto 3</h3>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener" aria-label="Repositório no GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16 0 1.56-.02 2.82-.02 3.2 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener" aria-label="Ver demo ao vivo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+                </a>
+              </div>
+            </div>
+            <p>
+              Breve descrição do projeto: qual problema ele resolve, para quem
+              é e o que faz dele interessante. Duas ou três frases já bastam.
+            </p>
+            <ul class="project-tags">
+              <li>Python</li><li>FastAPI</li><li>Docker</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <p class="projects-more reveal">
+        Mais projetos no <a href="https://github.com/seunome" target="_blank" rel="noopener">meu GitHub →</a>
+      </p>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia" class="section container">
+      <h2 class="section-title reveal"><span class="section-num">04.</span> Experiência</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Cargo Atual</h3>
+              <span class="timeline-date">2023 — Presente</span>
+            </div>
+            <p class="timeline-company">Nome da Empresa</p>
+            <ul>
+              <li>Principal responsabilidade ou conquista nessa posição.</li>
+              <li>Outro resultado relevante, de preferência com números.</li>
+              <li>Tecnologias e processos utilizados no dia a dia.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Cargo Anterior</h3>
+              <span class="timeline-date">2021 — 2023</span>
+            </div>
+            <p class="timeline-company">Nome da Empresa Anterior</p>
+            <ul>
+              <li>Principal responsabilidade ou conquista nessa posição.</li>
+              <li>Outro resultado relevante, de preferência com números.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Formação / Curso</h3>
+              <span class="timeline-date">2018 — 2021</span>
+            </div>
+            <p class="timeline-company">Instituição de Ensino</p>
+            <ul>
+              <li>Curso, área de estudo ou especialização.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section container">
+      <h2 class="section-title reveal"><span class="section-num">05.</span> Contato</h2>
+
+      <div class="contact-wrap">
+        <div class="contact-info reveal">
+          <h3>Vamos trabalhar juntos?</h3>
+          <p>
+            Estou aberto(a) a novas oportunidades, projetos freelance e
+            colaborações interessantes. Me manda uma mensagem — respondo o
+            mais rápido possível.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:voce@email.com" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+              voce@email.com
+            </a>
+            <a href="https://github.com/seunome" target="_blank" rel="noopener" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16 0 1.56-.02 2.82-.02 3.2 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+              github.com/seunome
+            </a>
+            <a href="https://linkedin.com/in/seunome" target="_blank" rel="noopener" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              linkedin.com/in/seunome
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="form-row">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome" required />
+          </div>
+          <div class="form-row">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="voce@email.com" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" placeholder="Sua mensagem..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Enviar mensagem</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Feito com <span class="heart">♥</span> por Seu Nome — <span id="year"></span></p>
+      <a href="#top" class="back-to-top" aria-label="Voltar ao topo">↑</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
