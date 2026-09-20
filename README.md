@@ -34,6 +34,14 @@ Depois acesse `http://localhost:8000`.
     └── cv.pdf           # (adicione o seu currículo aqui)
 ```
 
+> **Dica:** se depois de atualizar o site publicado (GitHub Pages, Netlify
+> etc.) as mudanças não aparecerem, geralmente é cache do navegador. Dê um
+> refresh forçado (`Ctrl+Shift+R` no Windows/Linux, `Cmd+Shift+R` no Mac) ou
+> abra em uma aba anônima. Os links do CSS e do JS em `index.html` têm um
+> `?v=2` no final — sempre que editar `style.css` ou `script.js`, aumente
+> esse número (`?v=3`, `?v=4`...) para forçar o navegador a buscar a versão
+> nova.
+
 ## Como personalizar
 
 1. **Dados pessoais** — abra `index.html` e substitua os placeholders:
