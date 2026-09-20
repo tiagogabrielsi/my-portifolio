@@ -92,9 +92,11 @@ Depois acesse `http://localhost:8000`.
    [EmailJS](https://www.emailjs.com/): troque o valor de `action` no
    `<form>` (em `index.html`) pela URL do seu endpoint.
 
-7. **Foto de perfil** — para trocar o círculo com a inicial "T" por uma foto
-   real, substitua o `<div class="avatar-placeholder">` por uma `<img>` e
-   ajuste o CSS de `.avatar-placeholder` conforme necessário.
+7. **Foto de perfil** — já está configurada em `assets/tiago.jpg` (referenciada
+   no hero via `<img class="avatar-placeholder">`). Para trocar, basta
+   substituir esse arquivo por outra imagem de mesmo nome (ou apontar o
+   `src` para outro arquivo). Fica melhor com uma foto quadrada, já que o
+   CSS corta em círculo com `object-fit: cover`.
 
 ## Deploy
 
