@@ -1,4 +1,63 @@
 // ==========================================================================
+// Skills: technology logos + proficiency stars (1-5)
+// Edit `level` (0-5) for each skill to reflect your own proficiency.
+// Icons come from the Simple Icons CDN (https://simpleicons.org).
+// ==========================================================================
+(function initSkillCards() {
+  const SKILLS = {
+    frontend: [
+      { name: 'HTML5', icon: 'html5', level: 5 },
+      { name: 'CSS3', icon: 'css3', level: 5 },
+      { name: 'JavaScript', icon: 'javascript', level: 5 },
+      { name: 'TypeScript', icon: 'typescript', level: 4 },
+      { name: 'React', icon: 'react', level: 4 },
+      { name: 'Next.js', icon: 'nextdotjs', level: 3 },
+      { name: 'Tailwind CSS', icon: 'tailwindcss', level: 4 },
+    ],
+    backend: [
+      { name: 'Node.js', icon: 'nodedotjs', level: 4 },
+      { name: 'Express', icon: 'express', level: 4 },
+      { name: 'Python', icon: 'python', level: 3 },
+      { name: 'PostgreSQL', icon: 'postgresql', level: 3 },
+      { name: 'MongoDB', icon: 'mongodb', level: 3 },
+    ],
+    tools: [
+      { name: 'Git', icon: 'git', level: 5 },
+      { name: 'GitHub', icon: 'github', level: 5 },
+      { name: 'Docker', icon: 'docker', level: 3 },
+      { name: 'Vercel', icon: 'vercel', level: 4 },
+      { name: 'Linux', icon: 'linux', level: 3 },
+    ],
+  };
+
+  function starsMarkup(level) {
+    let markup = '';
+    for (let i = 1; i <= 5; i++) {
+      markup += `<svg class="star${i <= level ? ' filled' : ''}"><use href="#star-icon"></use></svg>`;
+    }
+    return markup;
+  }
+
+  Object.keys(SKILLS).forEach((group) => {
+    const container = document.querySelector(`[data-skill-group="${group}"]`);
+    if (!container) return;
+
+    container.innerHTML = SKILLS[group]
+      .map(
+        (skill) => `
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="https://cdn.simpleicons.org/${skill.icon}" alt="${skill.name}" loading="lazy" onerror="this.parentElement.style.display='none'" />
+          </div>
+          <span class="skill-name">${skill.name}</span>
+          <div class="skill-stars" role="img" aria-label="Nível: ${skill.level} de 5">${starsMarkup(skill.level)}</div>
+        </div>`
+      )
+      .join('');
+  });
+})();
+
+// ==========================================================================
 // Theme toggle (dark/light) with localStorage persistence
 // ==========================================================================
 (function initTheme() {

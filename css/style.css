@@ -5,6 +5,7 @@
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Space Grotesk', var(--font-sans);
   --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  --font-pixel: 'Press Start 2P', var(--font-display);
 
   --accent: #7c5cff;
   --accent-2: #00d4c4;
@@ -131,9 +132,9 @@ svg { width: 20px; height: 20px; }
 }
 
 .logo {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 1.15rem;
+  font-family: var(--font-pixel);
+  font-weight: 400;
+  font-size: 0.85rem;
   letter-spacing: -0.02em;
 }
 .logo-bracket { color: var(--accent); }
@@ -219,10 +220,12 @@ svg { width: 20px; height: 20px; }
   margin-bottom: 8px;
 }
 .hero-title {
-  font-size: clamp(2.6rem, 6vw, 4.2rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 6px;
+  font-family: var(--font-pixel);
+  font-size: clamp(1.8rem, 5.5vw, 3.1rem);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+  margin-bottom: 14px;
 }
 .hero-role {
   font-size: clamp(1.2rem, 3vw, 1.7rem);
@@ -336,7 +339,7 @@ svg { width: 20px; height: 20px; }
   align-items: baseline;
   gap: 12px;
 }
-.section-num { font-family: var(--font-mono); color: var(--accent); font-size: 1rem; font-weight: 500; }
+.section-num { font-family: var(--font-pixel); color: var(--accent); font-size: 0.75rem; font-weight: 400; }
 
 /* ---- About ---- */
 .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; }
@@ -389,6 +392,43 @@ svg { width: 20px; height: 20px; }
   transition: color var(--transition), border-color var(--transition);
 }
 .skill-tags li:hover { color: var(--accent-2); border-color: var(--accent-2); }
+
+/* ---- Skill cards (logo + name + star rating) ---- */
+.skills-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: 14px;
+}
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated-2);
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.skill-card:hover { border-color: var(--accent-2); transform: translateY(-3px); }
+.skill-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.3);
+}
+.skill-icon img { width: 100%; height: 100%; object-fit: contain; }
+.skill-name { font-size: 0.8rem; font-weight: 600; color: var(--text); }
+.skill-stars { display: flex; gap: 2px; }
+.skill-stars .star { width: 13px; height: 13px; fill: none; stroke: var(--text-faint); stroke-width: 1.5; }
+.skill-stars .star.filled { fill: var(--accent-2); stroke: var(--accent-2); }
+.icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 
 /* ---- Projects ---- */
 .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }

@@ -37,8 +37,8 @@ Depois acesse `http://localhost:8000`.
 ## Como personalizar
 
 1. **Dados pessoais** — abra `index.html` e substitua os placeholders:
-   - `Seu Nome`, e-mails, links de GitHub/LinkedIn (busque por `seunome` e
-     `voce@email.com`)
+   - Nome já está como "Tiago"; troque e-mails e links de GitHub/LinkedIn
+     (busque por `seunome` e `voce@email.com`)
    - Textos das seções "Sobre", "Experiência" e "Projetos"
    - Adicione seu currículo em `assets/cv.pdf` (usado no botão "Baixar CV")
 
@@ -51,12 +51,30 @@ Depois acesse `http://localhost:8000`.
 3. **Frases do efeito de digitação** — em `js/script.js`, edite o array
    `roles` dentro de `initTypedText()`.
 
-4. **Formulário de contato** — o formulário em "Contato" está pronto para
+4. **Tecnologias, logos e nível de proficiência (estrelas)** — em
+   `js/script.js`, dentro de `initSkillCards()`, edite o objeto `SKILLS`.
+   Cada tecnologia tem `name` (nome exibido), `icon` (slug do logo, veja
+   [simpleicons.org](https://simpleicons.org) para encontrar o slug de cada
+   marca) e `level` (de 0 a 5, quantas estrelas ficam preenchidas). Os logos
+   são carregados de uma CDN pública ([Simple Icons](https://simpleicons.org))
+   — se algum logo não existir para a tecnologia, o card mostra só o nome e
+   as estrelas, sem quebrar o layout.
+
+5. **Fonte "estilo game"** — o nome ("Tiago"), o logo do menu e os números
+   das seções (01., 02., ...) usam a fonte pixelada **Press Start 2P**
+   (Google Fonts), para dar uma pegada retrô/gamer parecida com a estética
+   do Minecraft. A fonte oficial do Minecraft é proprietária da Mojang e não
+   pode ser redistribuída livremente, por isso foi usada essa alternativa
+   gratuita. Para trocar, edite a variável `--font-pixel` no topo de
+   `css/style.css` (e o link do Google Fonts em `index.html`, se trocar de
+   fonte).
+
+6. **Formulário de contato** — o formulário em "Contato" está pronto para
    ser conectado a um serviço como [Formspree](https://formspree.io/) ou
    [EmailJS](https://www.emailjs.com/): troque o valor de `action` no
    `<form>` (em `index.html`) pela URL do seu endpoint.
 
-5. **Foto de perfil** — para trocar o círculo com iniciais por uma foto
+7. **Foto de perfil** — para trocar o círculo com a inicial "T" por uma foto
    real, substitua o `<div class="avatar-placeholder">` por uma `<img>` e
    ajuste o CSS de `.avatar-placeholder` conforme necessário.
 

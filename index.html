@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seu Nome — Desenvolvedor(a) de Software</title>
-  <meta name="description" content="Portfólio de Seu Nome, desenvolvedor(a) de software. Projetos, habilidades e contato." />
+  <title>Tiago — Desenvolvedor(a) de Software</title>
+  <meta name="description" content="Portfólio de Tiago, desenvolvedor(a) de software. Projetos, habilidades e contato." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body data-theme="dark">
   <div class="progress-bar" id="progressBar"></div>
 
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="star-icon" viewBox="0 0 24 24">
+      <path d="M12 2.5l2.95 6.28 6.8.82-5.06 4.72 1.4 6.87L12 17.77l-6.09 3.42 1.4-6.87-5.06-4.72 6.8-.82L12 2.5z"/>
+    </symbol>
+  </svg>
+
   <header class="site-header" id="siteHeader">
     <nav class="nav container">
       <a href="#top" class="logo">
-        <span class="logo-bracket">&lt;</span>SeuNome<span class="logo-bracket">/&gt;</span>
+        <span class="logo-bracket">&lt;</span>Tiago<span class="logo-bracket">/&gt;</span>
       </a>
 
       <ul class="nav-links" id="navLinks">
@@ -46,7 +52,7 @@
     <section class="hero container">
       <div class="hero-text reveal">
         <p class="hero-eyebrow">Olá, eu sou</p>
-        <h1 class="hero-title">Seu Nome</h1>
+        <h1 class="hero-title">Tiago</h1>
         <p class="hero-role">
           <span class="typed-prefix">Eu sou </span><span id="typed" class="typed"></span><span class="cursor">|</span>
         </p>
@@ -74,7 +80,7 @@
 
       <div class="hero-visual reveal">
         <div class="avatar-frame">
-          <div class="avatar-placeholder">SN</div>
+          <div class="avatar-placeholder">T</div>
           <div class="orbit orbit-1"></div>
           <div class="orbit orbit-2"></div>
         </div>
@@ -84,7 +90,7 @@
             <span class="code-card-title">sobre-mim.js</span>
           </div>
           <pre class="code-card-body"><code><span class="tok-kw">const</span> <span class="tok-var">dev</span> = {
-  nome: <span class="tok-str">"Seu Nome"</span>,
+  nome: <span class="tok-str">"Tiago"</span>,
   stack: [<span class="tok-str">"JS"</span>, <span class="tok-str">"React"</span>, <span class="tok-str">"Node"</span>],
   foco: <span class="tok-str">"produto + qualidade"</span>,
   disponivel: <span class="tok-bool">true</span>,
@@ -151,24 +157,15 @@
       <div class="skills-grid">
         <div class="skill-category reveal">
           <h3>Front-end</h3>
-          <ul class="skill-tags">
-            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>TypeScript</li>
-            <li>React</li><li>Next.js</li><li>Tailwind CSS</li>
-          </ul>
+          <div class="skills-cards" data-skill-group="frontend"></div>
         </div>
         <div class="skill-category reveal">
           <h3>Back-end</h3>
-          <ul class="skill-tags">
-            <li>Node.js</li><li>Express</li><li>Python</li><li>REST APIs</li>
-            <li>PostgreSQL</li><li>MongoDB</li>
-          </ul>
+          <div class="skills-cards" data-skill-group="backend"></div>
         </div>
         <div class="skill-category reveal">
           <h3>Ferramentas &amp; DevOps</h3>
-          <ul class="skill-tags">
-            <li>Git</li><li>GitHub</li><li>Docker</li><li>CI/CD</li>
-            <li>Vercel</li><li>Linux</li>
-          </ul>
+          <div class="skills-cards" data-skill-group="tools"></div>
         </div>
         <div class="skill-category reveal">
           <h3>Boas práticas</h3>
@@ -371,7 +368,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>Feito com <span class="heart">♥</span> por Seu Nome — <span id="year"></span></p>
+      <p>Feito com <span class="heart">♥</span> por Tiago — <span id="year"></span></p>
       <a href="#top" class="back-to-top" aria-label="Voltar ao topo">↑</a>
     </div>
   </footer>
