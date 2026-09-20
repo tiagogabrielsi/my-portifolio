@@ -180,6 +180,24 @@ svg { width: 20px; height: 20px; }
 [data-theme='light'] .icon-sun { display: none; }
 [data-theme='light'] .icon-moon { display: block; }
 
+.lang-toggle {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  transition: border-color var(--transition), transform var(--transition), color var(--transition);
+}
+.lang-toggle:hover { border-color: var(--accent); color: var(--accent); transform: scale(1.06); }
+
+/* Elements only relevant to a Brazilian audience (e.g. Currículo Lattes) */
+[data-lang='en'] .lang-pt-only { display: none; }
+
 .nav-cta { display: inline-flex; }
 
 .menu-toggle {
@@ -370,7 +388,7 @@ svg { width: 20px; height: 20px; }
 .highlight-label { font-size: 0.82rem; color: var(--text-muted); }
 
 /* ---- Skills ---- */
-.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: start; }
 .skill-category {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
@@ -424,6 +442,13 @@ svg { width: 20px; height: 20px; }
   box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.3);
 }
 .skill-icon img { width: 100%; height: 100%; object-fit: contain; }
+.skill-badge {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
 .skill-name { font-size: 0.8rem; font-weight: 600; color: var(--text); }
 .skill-stars { display: flex; gap: 2px; }
 .skill-stars .star { width: 13px; height: 13px; fill: none; stroke: var(--text-faint); stroke-width: 1.5; }
