@@ -39,8 +39,8 @@ Depois acesse `http://localhost:8000`.
 > etc.) as mudanças não aparecerem, geralmente é cache do navegador. Dê um
 > refresh forçado (`Ctrl+Shift+R` no Windows/Linux, `Cmd+Shift+R` no Mac) ou
 > abra em uma aba anônima. Os links do CSS e do JS em `index.html` têm um
-> `?v=3` no final — sempre que editar `style.css` ou `script.js`, aumente
-> esse número (`?v=4`, `?v=5`...) para forçar o navegador a buscar a versão
+> `?v=4` no final — sempre que editar `style.css` ou `script.js`, aumente
+> esse número (`?v=5`, `?v=6`...) para forçar o navegador a buscar a versão
 > nova.
 
 ## Como personalizar

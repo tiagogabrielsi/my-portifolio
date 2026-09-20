@@ -339,7 +339,7 @@ svg { width: 20px; height: 20px; }
   align-items: center;
   gap: 8px;
 }
-.scroll-indicator span {
+.scroll-indicator .scroll-line {
   width: 1px; height: 30px;
   background: linear-gradient(var(--accent), transparent);
   animation: scrollpulse 1.6s ease-in-out infinite;
@@ -388,17 +388,19 @@ svg { width: 20px; height: 20px; }
 .highlight-label { font-size: 0.82rem; color: var(--text-muted); }
 
 /* ---- Skills ---- */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: start; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: stretch; }
 .skill-category {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px;
+  display: flex;
+  flex-direction: column;
   transition: border-color var(--transition), transform var(--transition);
 }
 .skill-category:hover { border-color: var(--accent); transform: translateY(-3px); }
 .skill-category h3 { font-size: 1.05rem; margin-bottom: 16px; color: var(--text); }
-.skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-tags { display: flex; flex-wrap: wrap; align-content: flex-start; gap: 10px; flex: 1; }
 .skill-tags li {
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -414,13 +416,16 @@ svg { width: 20px; height: 20px; }
 /* ---- Skill cards (logo + name + star rating) ---- */
 .skills-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 14px;
+  flex: 1;
+  align-content: start;
 }
 .skill-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 16px 10px;
   border-radius: var(--radius-sm);
@@ -588,7 +593,6 @@ svg { width: 20px; height: 20px; }
 .site-footer { border-top: 1px solid var(--border); padding: 28px 0; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; }
 .footer-inner p { color: var(--text-faint); font-size: 0.85rem; }
-.heart { color: var(--accent); }
 .back-to-top {
   width: 38px; height: 38px;
   border-radius: 50%;
